@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    valor 1: <input type="number" id="valor1">
+    valor 2: <input type="number" id="valor2">
+    <button type="button" onclick="multiplicar()"> * </button>
+    <button type="button" onclick="subtração()"> - </button>
+    <button type="button" onclick="divisão()"> / </button>
+    <button type="button" onclick="adição()"> + </button>
+    <h3 id="resultado"></h3>
+
+    <script>
+        function multiplicar() {
+            //pegar o valor do campo valor1 e guardar em uma variavel (v1)(caixinha)
+            let v1 = document.getElementById("valor1").value
+
+            //pegar o valor do campo valor2 e guardar em uma variavel (v2)(caixinha)
+            let v2 = document.getElementById("valor2").value
+
+            //multiplicar o valor1 pelo valor2 e guardar em uma variavel (v1 vezes v2) (caixinha)
+            let res = v1 * v2
+            //colocar o resultado da multiplicação dentro do h3
+            document.getElementById("resultado").innerHTML = res
+        }
+        function subtração() {
+            let v1 = document.getElementById("valor1").value
+            let v2 = document.getElementById("valor2").value
+            let res = v1 - v2
+            document.getElementById("resultado").innerHTML = res
+        }
+
+        function divisão() {
+            let v1 = document.getElementById("valor1").value
+            let v2 = document.getElementById("valor2").value
+            let res = v1 / v2
+            document.getElementById("resultado").innerHTML = res
+        }
+
+        function adição() {
+            let v1 = document.getElementById("valor1").value
+            let v2 = document.getElementById("valor2").value
+            let res = Number(v1) + Number(v2)
+            // res = parseFloat(v1) + parseFloat(v2) -- Numer e parseFloat funciona da mesma forma
+            document.getElementById("resultado").innerHTML = res
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>
